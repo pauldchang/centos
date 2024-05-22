@@ -1,6 +1,5 @@
 FROM centos:latest
-LABEL paul=test
-RUN yum install pingu curl pingu nginx
-COPY ./text.sh /
-EXPOSE 8080
-CMD ["postgres"]
+RUN yum install -y curl nginx sql ping
+EXPOSE 80
+COPY ./text.sh 
+LABEl paul=devops
